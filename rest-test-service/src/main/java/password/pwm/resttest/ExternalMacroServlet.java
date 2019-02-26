@@ -57,7 +57,7 @@ public class ExternalMacroServlet extends HttpServlet
 
             String[] messageContent = body.split("=");
             String message = messageContent[messageContent.length - 1];
-            String username = message.split(" ")[0];
+            String username = message.split("\\+")[0];
             Date currentDate = new Date();
             SmsPostResponseBody messageBody = new SmsPostResponseBody(message, currentDate);
 
